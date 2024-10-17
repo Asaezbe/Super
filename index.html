@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="logo favicon" weight="30px">
+    <title>SuperHero Chile</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!--  CanvasJS  gráficos -->
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</head>
+<body>
+    <header class="bg-dark text-white p-3 text-center">
+        <h1>SuperHero Chile</h1>
+    </header>
+
+    <main class="container">
+       
+        <section class="mb-4">
+            <img class="Foto1" src="./assets/img/sh1.jpg" alt="Imagen super hero" >
+            <h2>Encuentra a tu Superhéroe</h2>
+            <div class="form-group">
+                <label for="superH">ID del Superhéroe</label>
+                 <!-- Formulario de búsqueda -->
+                <input type="text" class="form-control" id="superH" placeholder="Ingresa un número entre el 1 y el 731 para descubrir al Superhéroe">
+                <button id="buscarBtn" class="btn btn-secondary">Buscar</button> <!-- Botón activa la búsqueda -->
+            </div>
+        </section>
+
+        <!-- Información del superhéroe -->
+        <section class="card" id="superhero-card" style="display: none;">
+            <div class="card-body">
+                <h5 class="card-title" id="superhero-name"></h5>
+                <img id="superheroImg" class="card-img-top" src="" alt="Imagen del superhéroe">
+                <p class="card-text" id="superhero-info"></p>
+            </div>
+        </section>
+
+        <!-- gráfico circular -->
+        <section class="card mt-4">
+            <div class="card-body">
+                <h3>Estadísticas de Poder</h3>
+                <div id="chartContainer" style="height: 370px; width: 100%;"></div> <!-- Contenedor para el gráfico -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center p-3 mt-4">
+        <p>&copy; 2024 SuperHero Chile</p>
+    </footer>
+
+    <!-- Cargar jQuery y el archivo JavaScript externo -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="/assets/js/index.js"></script>
+</body>
+</html>
+
+
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    .container {
+        margin-top: 50px;
+    }
+    
+    #superheroImg {
+        display: none;
+        max-width: 300px;
+        margin: 20px auto;
+    }
+
+    #chartContainer {
+        height: 300px;
+        width: 100%;
+    }
+
+    .Foto1 {
+    display: block;
+    margin: 0 auto; 
+    max-width: 100%; 
+    height: auto;
+   }
+
+
+   #buscarBtn:hover {
+    background-color: black !important; /* Changes background to black on hover */
+    color: white !important; /* Ensures the text remains visible */
+}
+
+</style>
